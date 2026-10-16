@@ -1,0 +1,46 @@
+/* Connections page. Prefix: cn- */
+
+/* hero: headline spans the top, the real list is the visual */
+.cn-hero { padding-block: clamp(2.5rem, 1.5rem + 4vw, 5.5rem) clamp(3rem, 2rem + 4vw, 6rem); }
+.cn-hero__head { display: grid; gap: var(--s-5) clamp(2rem, 6vw, 6rem); align-items: end; margin-bottom: var(--s-7); }
+@media (min-width: 960px) { .cn-hero__head { grid-template-columns: 7fr 5fr; } }
+.cn-hero h1 { max-width: 14ch; font-size: clamp(2.4rem, .9rem + 4.4vw, 4.5rem); }
+.cn-hero .btn-row { margin-top: var(--s-5); }
+.cn-list .win__bar .chip { min-height: 26px; padding: .2rem .7rem; font-size: .72rem; }
+.cn-list .win__bar .chip svg { width: 12px; height: 12px; color: #fff; }
+.cn-filters { margin-bottom: .6rem; }
+.cn-act svg { width: 18px; height: 18px; color: var(--ink-3); }
+.cn-list .tbl .name svg { color: var(--ok); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* hub */
+.cn-hub .copy h2, .cn-make .copy h2 { font-size: clamp(1.8rem, 1.2rem + 1.9vw, 2.8rem); }
+.cn-hub .copy .btn-row { gap: .25rem 1rem; }
+.cn-map { display: grid; grid-template-columns: minmax(0, 11rem) 3rem minmax(0, 1fr); align-items: stretch; }
+.cn-src { align-self: center; padding: 1rem; display: grid; gap: .35rem; justify-items: start; font-family: var(--font-display); font-size: 1.05rem; }
+.cn-src small { font-family: var(--font-body); }
+.cn-rails { display: grid; grid-template-rows: repeat(3, 1fr); position: relative; }
+.cn-rails i { position: relative; }
+.cn-rails i::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 2px; background: var(--source); transform-origin: 0 50%; transform: scaleX(var(--s, 1)); }
+.cn-rails::before { content: ""; position: absolute; left: 0; top: 16.6%; bottom: 16.6%; width: 2px; background: var(--source); }
+.cn-rails::after { content: ""; position: absolute; left: -6px; top: calc(50% - 5px); width: 10px; height: 10px; border-radius: 50%; background: var(--source); }
+.cn-outs { list-style: none; margin: 0; padding: 0; display: grid; gap: .75rem; }
+.cn-outs li { display: flex; align-items: center; gap: .75rem; padding: .85rem 1rem; }
+.cn-ico { flex: none; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 9px; background: var(--brand-tint); color: var(--brand-ink); }
+.cn-ico svg { width: 18px; height: 18px; }
+@media (max-width: 560px) { .cn-map { grid-template-columns: 1fr; } .cn-rails { display: none; } .cn-outs { margin-top: .75rem; } .cn-src { align-self: stretch; } }
+
+/* dialog */
+.cn-dialog { max-width: 30rem; box-shadow: var(--e-3); }
+.cn-form { display: grid; gap: 1rem; padding: 1.25rem; }
+.cn-l { display: block; font-weight: 600; margin-bottom: .35rem; color: var(--ink-2); }
+.cn-in { display: flex; justify-content: space-between; align-items: center; min-height: 40px; padding: .55rem .8rem; border: 1.5px solid var(--line-strong); border-radius: var(--r-s); }
+.cn-in svg { width: 14px; height: 14px; color: var(--ink-3); }
+.cn-foot { display: flex; justify-content: flex-end; gap: .5rem; padding-top: .5rem; border-top: 1px solid var(--line); }
+.cn-foot .chip { min-height: 34px; }
+
+.cn-defs .defs dt { font-size: 1.4rem; }
+.cn-works { display: grid; gap: var(--s-4) var(--s-7); align-items: center; }
+@media (min-width: 900px) { .cn-works { grid-template-columns: 5fr 7fr; } }
+.cn-works h2 { font-size: clamp(1.4rem, 1.1rem + 1vw, 1.9rem); max-width: 18ch; }
+.cn-list .tbl-scroll { position: relative; }

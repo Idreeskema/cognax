@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboards | Cognax</title>
+<meta name="description" content="Group reports into dashboards and build each report from a connected source so every number can be traced.">
+<meta name="theme-color" content="#161617">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="css/dashboards.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<nav class="gnav" aria-label="Main">
+  <div class="gnav-in">
+    <a class="brand" href="index.html" aria-label="Cognax home"><img src="assets/logo-light.svg" alt="Cognax" width="112" height="25"></a>
+    <div class="glinks" id="links"><a href="naxie.html">Naxie</a><a href="knowledge-base.html">Knowledge</a><a href="dashboards.html" aria-current="page">Dashboards</a><a href="presentations.html">Presentations</a><a href="connections.html">Connections</a><a href="automation.html">Automation</a><a href="support.html">Support</a><a href="contact.html">Contact</a><a href="https://cognax.expentor.com/login">Sign in</a></div>
+    <button class="gburger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="links"><span></span></button>
+  </div>
+</nav>
+<main id="main">
+
+
+<div class="lnav"><div class="lnav-in">
+  <a class="lnav-title" href="#top">Dashboards</a>
+  <div class="lnav-r"><a href="#overview">Overview</a><a href="#groups">Groups</a><a href="#source">Source-backed</a><a class="pill" href="contact.html">Request a demo</a></div>
+</div></div>
+
+<section class="ahero dx-hero" id="overview">
+  <div class="wrap">
+    <h1 class="reveal">Reports that point back to their source.</h1>
+    <p class="lede reveal">Group reports into dashboards, then build each one from a connected source so every number can be traced.</p>
+    <div class="cta-row reveal"><a class="pill lg" href="contact.html">Request a demo</a><a class="alink" href="#source">See how a number is traced</a></div>
+  </div>
+  <div class="wrap wide">
+    <div class="stage3d dx-hero-stage" data-stage="dash-hero" role="img" aria-label="A 3D bar chart on a plinth, linked by a thin line to the spreadsheet it was built from"><span class="fallback">Bar chart linked to its source spreadsheet</span></div>
+  </div>
+</section>
+
+<section class="dx-groups" id="groups" aria-labelledby="dx-g-h">
+  <div class="dx-pin">
+    <div class="dx-pin-head wrap">
+      <h2 id="dx-g-h">Organize reports into groups.</h2>
+      <p class="lede">Keep operational views, finance and project reports apart and open each in one click.</p>
+      <ol class="dx-glist" aria-label="Example dashboards">
+        <li><b>Operations review</b><span>3 reports</span></li>
+        <li><b>Vendor performance</b><span>3 reports</span></li>
+        <li><b>Finance</b><span>Add a description</span></li>
+      </ol>
+    </div>
+    <div class="stage3d dx-groups-stage" data-stage="dash-groups" role="img" aria-label="Three report groups separating from one platform into their own, with the camera circling them"><span class="fallback">Report groups</span></div>
+  </div>
+</section>
+
+<section class="sec dx-source" id="source" aria-labelledby="dx-s-h">
+  <div class="wrap wide">
+    <h2 id="dx-s-h" class="reveal">Source-backed, not screenshot-backed.</h2>
+    <p class="lede reveal">Each report is created from a connection, such as an Excel file. When the source changes, you know where to look.</p>
+    <div class="dx-source-body sec-visual">
+      <div class="stage3d dx-source-stage" data-stage="dash-source" role="img" aria-label="Interactive 3D bar chart. Hover a column to highlight its source row in the table."><span class="fallback">Chart</span></div>
+      <div class="ui dx-sheet">
+        <div class="ui-bar"><i></i><i></i><i></i><span style="margin-left:8px">vendor_spend.xlsx</span><span class="tag ok" style="margin-left:auto">Connected</span></div>
+        <table class="tbl dx-tbl"><thead><tr><th>Vendor</th><th class="num">Q3 spend ($k)</th><th>Source</th></tr></thead><tbody><tr tabindex="0"><td>Alder Freight</td><td class="num">412</td><td class="src">Row 2</td></tr><tr tabindex="0"><td>Birch Packaging</td><td class="num">298</td><td class="src">Row 3</td></tr><tr tabindex="0"><td>Cobalt Metals</td><td class="num">655</td><td class="src">Row 4</td></tr><tr tabindex="0"><td>Delta Logistics</td><td class="num">371</td><td class="src">Row 5</td></tr><tr tabindex="0"><td>Elm Components</td><td class="num">520</td><td class="src">Row 6</td></tr><tr tabindex="0"><td>Fjord Plastics</td><td class="num">244</td><td class="src">Row 7</td></tr></tbody></table>
+        <p class="dx-trace" aria-live="polite">Hover a column, or a row, to see where the number comes from.</p>
+      </div>
+    </div>
+    <p class="muted dx-points">Build reports from Excel connections &middot; Share reports with teammates &middot; Ungrouped reports are kept in their own tab</p>
+  </div>
+</section>
+
+<section class="sec gray dx-works" aria-labelledby="dx-w-h">
+  <div class="wrap">
+    <h2 id="dx-w-h" class="dx-works-h">Works with</h2>
+    <p class="lede">Dashboards sit on top of your connections and feed your decks.</p>
+    <nav class="cta-row" aria-label="Related products"><a class="alink" href="connections.html">Connections</a><a class="alink" href="presentations.html">Presentations</a><a class="alink" href="naxie.html">Naxie</a></nav>
+  </div>
+</section>
+
+
+<section class="section" style="padding:0;margin-top:clamp(48px,7vw,96px)"><div class="cta-band" data-cta>
+  <h2>Turn a spreadsheet into a report you can defend</h2><p>We will build a first dashboard from one of your own files during the demo.</p>
+  <div class="cta-row"><a class="pill lg" href="contact.html">Request a demo</a><a class="alink" href="https://cognax.expentor.com/login">Sign in</a></div>
+</div></section>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-note">Cognax brings documents, tables, dashboards and assistant workflows into one workspace. Screens and data shown on this site are illustrative.</p>
+    <div class="foot-cols">
+      <div><h4>Product</h4><ul><li><a href="naxie.html">Naxie</a></li><li><a href="knowledge-base.html">Knowledge Base</a></li><li><a href="dashboards.html">Dashboards</a></li></ul></div>
+      <div><h4>Build</h4><ul><li><a href="presentations.html">Presentations</a></li><li><a href="connections.html">Connections</a></li><li><a href="automation.html">Data & Automation</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="contact.html">Contact</a></li><li><a href="support.html">Support</a></li><li><a href="https://cognax.expentor.com/login">Sign in</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
+    </div>
+    <div class="foot-base"><span>Copyright &copy; 2026 Cognax. All rights reserved.</span><span>cognax.ai</span></div>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="main.js" defer></script>
+<script type="module" src="js/dashboards.js"></script>
+</body>
+</html>

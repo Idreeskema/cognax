@@ -1,0 +1,33 @@
+/* Presentations page */
+.px-hero { padding-bottom: 0; }
+.px-flip { height: 260vh; position: relative; }
+.px-pin { position: sticky; top: 96px; height: calc(100svh - 96px); display: flex; align-items: center; }
+.px-pin-in { position: relative; height: 100%; }
+.px-hero-stage { aspect-ratio: auto; height: 100%; max-height: none; }
+.px-progress { position: absolute; left: 0; right: 0; bottom: 14px; margin: 0; display: grid; justify-items: center; gap: 8px; font-size: .8125rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.px-progress b { color: var(--ink); font-weight: 600; }
+.px-bar { width: 200px; height: 3px; border-radius: 2px; background: var(--line); overflow: hidden; display: block; }
+.px-bar i { display: block; height: 100%; background: var(--accent); transform-origin: left; transform: scaleX(0); }
+
+.px-from-stage, .px-latest-stage { aspect-ratio: 16 / 8.5; max-height: 680px; }
+.px-points { margin-top: 32px; font-size: .95rem; }
+.px-demo { gap: 16px 24px; }
+.px-live { font-size: .95rem; color: var(--ink-2); }
+.px-works { padding: clamp(48px, 6vw, 80px) 0; }
+.px-works-h { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+
+@media (max-width: 980px) {
+  .px-flip { height: auto; }
+  .px-pin { position: static; height: auto; }
+  .px-pin-in { height: auto; }
+  .px-hero-stage { aspect-ratio: 1 / 1; height: auto; }
+  .px-progress { position: static; margin-top: 8px; }
+  .px-from-stage, .px-latest-stage { aspect-ratio: 4 / 3; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .px-flip { height: auto; }
+  .px-pin { position: static; height: auto; }
+  .px-pin-in { height: auto; }
+  .px-hero-stage { height: auto; aspect-ratio: 16 / 9; }
+  .px-progress { display: none; }
+}

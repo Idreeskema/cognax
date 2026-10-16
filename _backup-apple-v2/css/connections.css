@@ -1,0 +1,39 @@
+/* Connections page */
+.cn-hero-stage { aspect-ratio: 16 / 9; max-height: 680px; margin-top: -8px; }
+#overview .cta-row { margin-bottom: 0; }
+#overview .fineprint { margin-bottom: 8px; }
+
+.cn-tilt { perspective: 1800px; max-width: 920px; margin-inline: auto; }
+.cn-ui { transform: rotateX(4deg); transition: transform .5s var(--ease); transform-origin: center bottom; max-width: 100%; }
+.cn-tools { display: flex; align-items: center; gap: 8px; padding: 14px 16px 6px; font-size: .8rem; }
+.cn-chip { padding: 5px 12px; border-radius: 8px; border: 1px solid var(--line); color: var(--ink-2); font-weight: 500; }
+.cn-chip.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+.cn-search { margin-left: auto; padding: 6px 12px; border: 1px solid var(--line); border-radius: 8px; color: var(--muted); min-width: 160px; }
+.cn-new { padding: 6px 12px; border-radius: 8px; background: var(--brand); color: #fff; font-weight: 600; white-space: nowrap; }
+.cn-scroll { overflow-x: auto; }
+.cn-tbl { min-width: 640px; }
+.cn-tbl td b { font-weight: 600; }
+.cn-dim { color: var(--muted); white-space: nowrap; }
+.cn-tbl tbody tr:first-child td { background: var(--brand-soft); }
+
+/* sticky stage with centered steps beneath */
+.cn-fan { padding-bottom: 0; }
+.cn-fan .wrap + .wrap { margin-top: clamp(16px, 3vw, 32px); }
+.cn-fan-grid { position: relative; }
+.cn-fan-stage { position: sticky; top: calc(var(--nav-h) + var(--local-h)); z-index: 2; background: var(--bg); height: min(62vh, 560px); display: grid; }
+.cn-fan-3d { aspect-ratio: auto; height: 100%; max-height: none; }
+.cn-steps { position: relative; z-index: 1; }
+.cn-step { min-height: 52vh; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; gap: 10px; padding-top: 5vh; opacity: .3; transition: opacity .5s var(--ease); }
+.cn-step.is-on { opacity: 1; }
+.cn-step p { color: var(--ink-2); font-size: clamp(1.0625rem, 1.6vw, 1.3125rem); max-width: 36ch; }
+.cn-step:last-child { min-height: 70vh; }
+
+.cn-works { padding: clamp(56px, 7vw, 96px) 0; }
+.cn-works h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); max-width: none; margin-bottom: 18px; }
+
+@media (max-width: 980px) {
+  .cn-hero-stage { aspect-ratio: 1 / 1; }
+  .cn-fan-stage { height: 40vh; }
+}
+@media (max-width: 560px) { .cn-hero-stage { aspect-ratio: 4 / 5; } .cn-ui { transform: none; } .cn-search { display: none; } }
+@media (prefers-reduced-motion: reduce) { .cn-ui { transform: none; } .cn-step { opacity: 1; } }

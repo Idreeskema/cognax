@@ -1,0 +1,151 @@
+/* Home page (Apple-style). Classes prefixed nx-. Content is complete without JS; html.nx-js enables intro/scroll states. */
+
+/* ---------- hero ---------- */
+.ahero { padding-top: clamp(36px, 5vw, 64px); }
+.ahero h1 { font-size: clamp(2.5rem, 5.2vw, 4.4rem); max-width: none; line-height: 1.04; }
+.nx-line { display: block; overflow: hidden; padding-bottom: .1em; margin-bottom: -.1em; }
+.nx-line > span { display: block; }
+.ahero .lede { margin: 16px auto 18px; font-size: clamp(1.1rem, 1.7vw, 1.4rem); font-weight: 400; max-width: 44ch; }
+.ahero .cta-row { margin-bottom: 0; }
+.nx-js .nx-line > span { transform: translateY(110%); }
+.nx-js .nx-fade { opacity: 0; transform: translateY(14px); }
+
+.nx-pin { height: calc(100dvh + 130vh); position: relative; margin-top: -3vw; }
+.nx-pin-sticky { position: sticky; top: var(--nav-h); height: calc(100dvh - var(--nav-h)); display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.nx-stage { width: min(1400px, 100%); aspect-ratio: auto; height: min(100%, 56vw); max-height: none; }
+.nx-caption { position: absolute; left: 0; right: 0; bottom: 3%; text-align: center; font-size: clamp(1.0625rem, 1.6vw, 1.3125rem); font-weight: 600; letter-spacing: -0.015em; color: var(--ink); opacity: 0; margin: 0; }
+
+/* ---------- tools tiles ---------- */
+.nx-tools-head { padding-bottom: clamp(32px, 5vw, 56px); }
+.nx-tiles { padding-top: 0; }
+.nx-tiles .atile { min-height: 560px; }
+.nx-tiles .atile.wide { min-height: 660px; }
+.nx-tiles .atile.nx-light { min-height: 460px; }
+.nx-tiles .atile .cta-row { gap: 4px 24px; }
+.atile.dark .alink { color: #a5a0ff; }
+.atile h3 { max-width: 20ch; }
+.atile > p { max-width: 34ch; }
+.atile:not(.dark) > p { color: var(--ink-2); }
+.atile.dark > p { color: #a1a1a6; }
+.atile .ui { color: var(--ink); }
+.atile .media { display: flex; justify-content: center; align-items: flex-start; margin-top: 36px; overflow: hidden; }
+.atile .media > .ui { width: min(520px, 92%); margin-bottom: 0; }
+.atile .media .ui-body { min-height: 260px; align-content: start; }
+.nx-duo { display: flex; justify-content: center; align-items: flex-end; gap: 16px; width: min(980px, 96%); }
+.nx-duo .ui { flex: 1; margin-bottom: -90px; min-width: 0; }
+.nx-duo .ui-body { min-height: 300px; align-content: start; }
+.nx-docbody small { color: var(--muted); font-weight: 500; }
+.nx-docbody p { margin: 8px 0 14px; line-height: 1.6; color: var(--ink-2); }
+.nx-hl { background: #ffe9a8; color: var(--ink); padding: 1px 2px; border-radius: 3px; }
+.nx-line-bar { display: block; height: 7px; border-radius: 4px; background: var(--line); margin-bottom: 10px; }
+.nx-line-bar.s { width: 60%; }
+.atile.nx-light .media { align-items: center; margin-bottom: 40px; }
+
+/* shared mini-UI bits */
+.nx-b { padding: 11px 15px; border-radius: 14px; max-width: 88%; line-height: 1.45; font-size: .92rem; }
+.nx-b-u { background: var(--brand); color: #fff; justify-self: end; border-bottom-right-radius: 4px; }
+.nx-b-a { background: var(--bg-soft); color: var(--ink); border-bottom-left-radius: 4px; }
+.nx-cite { display: flex; width: max-content; align-items: center; gap: 6px; margin-top: 8px; padding: 3px 10px 3px 8px; border-radius: 999px; background: var(--brand-soft); color: var(--brand); font-size: .78rem; font-weight: 600; }
+.nx-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.nx-kpis div { border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+.nx-kpis b { display: block; font-size: 1.5rem; letter-spacing: -0.03em; }
+.nx-kpis small { color: var(--muted); }
+.nx-bars { height: 140px; display: flex; align-items: flex-end; gap: 12px; padding: 4px 6px 0; border-bottom: 1px solid var(--line); }
+.nx-bars span { flex: 1; background: #c9c6fa; border-radius: 6px 6px 0 0; }
+.nx-bars span.on { background: var(--brand); }
+.nx-slide { aspect-ratio: 16 / 8.5; border-radius: 12px; background: var(--brand-soft); padding: 22px; display: flex; flex-direction: column; justify-content: flex-end; gap: 6px; }
+.nx-slide small { color: var(--brand); font-weight: 600; }
+.nx-slide b { font-size: clamp(1.3rem, 2.2vw, 1.8rem); letter-spacing: -0.03em; line-height: 1.1; max-width: 14ch; }
+.nx-thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.nx-thumbs span { border: 1px solid var(--line); border-radius: 10px; padding: 18px 10px 10px; font-size: .78rem; color: var(--muted); background: #fff; }
+.nx-flow { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0; width: min(900px, 96%); }
+.nx-flow span { position: relative; border: 1px solid var(--line); border-radius: 14px; padding: 16px 22px; font-weight: 500; background: #fff; font-size: 1.05rem; }
+.nx-flow span:not(:last-child) { margin-right: 44px; }
+.nx-flow span:not(:last-child)::after { content: ""; position: absolute; left: 100%; top: 50%; width: 44px; height: 2px; background: var(--brand); opacity: .4; }
+.nx-flow span:last-child { background: var(--brand-soft); border-color: transparent; color: var(--brand); }
+
+/* ---------- how it works (centered, pinned) ---------- */
+.nx-how-pin { height: 340vh; padding: 0; }
+.nx-how-sticky { position: sticky; top: var(--nav-h); height: calc(100dvh - var(--nav-h)); display: flex; align-items: center; overflow: hidden; }
+.nx-how-sticky .wrap { width: min(860px, 100% - 48px); }
+.nx-how-h { font-size: clamp(1.8rem, 3.4vw, 2.75rem); max-width: 20ch; }
+.nx-steps { list-style: none; margin: 28px 0 28px; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: left; }
+.nx-steps li { opacity: .45; transition: opacity .4s; }
+.nx-steps li.is-on, .nx-steps li.is-done { opacity: 1; }
+.nx-bar { display: block; height: 2px; background: #d2d2d7; margin-bottom: 12px; overflow: hidden; }
+.nx-bar u { display: block; height: 100%; background: var(--ink); transform: scaleX(0); transform-origin: left; text-decoration: none; transition: transform .5s var(--ease); }
+.nx-steps li.is-on .nx-bar u, .nx-steps li.is-done .nx-bar u { transform: scaleX(1); }
+.nx-steps b { display: block; font-size: 1.3rem; letter-spacing: -0.02em; line-height: 1.2; }
+.nx-steps p { color: var(--ink-2); font-size: .95rem; line-height: 1.4; margin-top: 4px; }
+.nx-how-stage { perspective: 1600px; }
+.nx-card { max-width: 720px; margin-inline: auto; box-shadow: 0 40px 80px -40px rgba(0, 0, 0, .35); }
+.nx-card .ui-body { gap: 12px; }
+.nx-zone { display: grid; gap: 10px; }
+.nx-files { border: 1px solid var(--line); border-radius: 14px; padding: 4px 14px; }
+.nx-file { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--line); font-size: .9rem; }
+.nx-file:last-child { border-bottom: 0; }
+.nx-fname { display: inline-flex; align-items: center; gap: 10px; color: var(--ink-2); min-width: 0; }
+.nx-fname svg { color: var(--brand); flex: none; }
+.nx-fstat { display: inline-flex; align-items: center; gap: 10px; }
+.nx-prog { display: none; width: 70px; height: 5px; border-radius: 3px; background: var(--line); overflow: hidden; }
+.nx-prog u { display: block; height: 100%; width: 100%; background: var(--brand); text-decoration: none; }
+.nx-js .nx-prog { display: block; }
+.nx-js .nx-fstat em { display: none; font-style: normal; }
+.nx-js .nx-fstat em.is-shown { display: inline-block; }
+.nx-js .nx-fstat .nx-prog.is-done { display: none; }
+.nx-caret { display: none; width: 2px; height: 1em; background: #fff; margin-left: 2px; vertical-align: text-bottom; animation: nx-blink 1s steps(1) infinite; }
+.nx-js .nx-caret.is-on { display: inline-block; }
+@keyframes nx-blink { 50% { opacity: 0; } }
+.nx-source { border: 1px solid var(--line); border-radius: 14px; padding: 12px 16px; background: #fff; gap: 4px; }
+.nx-source small { color: var(--muted); font-weight: 500; }
+.nx-source p { font-size: .93rem; line-height: 1.55; color: var(--ink-2); }
+.nx-mark { background: linear-gradient(#ffe9a8, #ffe9a8) no-repeat left center / 100% 100%; color: var(--ink); padding: 1px 2px; border-radius: 3px; }
+
+/* ---------- statement ---------- */
+.nx-statement { padding: clamp(96px, 13vw, 180px) 0 clamp(24px, 4vw, 56px); }
+.nx-statement .wrap { width: min(1100px, 100% - 48px); }
+.nx-statement h2 { font-size: clamp(2.3rem, 6.2vw, 5rem); max-width: 16ch; }
+.nx-under { background: linear-gradient(var(--accent), var(--accent)) no-repeat 0 94% / 100% .07em; padding-bottom: .03em; }
+.nx-js .nx-under { background-size: 0 .07em; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 980px) {
+  .nx-pin { height: auto; margin-top: 0; }
+  .nx-pin-sticky { position: relative; top: 0; height: auto; display: block; }
+  .nx-stage { height: auto; aspect-ratio: 1 / 1; max-width: 640px; margin-inline: auto; }
+  .nx-caption { position: static; opacity: 1 !important; margin-top: 0; padding: 0 24px 8px; }
+  .nx-tiles .atile, .nx-tiles .atile.wide { min-height: 520px; }
+  .nx-duo { flex-direction: column; align-items: center; }
+  .nx-duo .ui { margin-bottom: 0; width: min(520px, 92%); flex: none; }
+  .nx-duo .ui:first-child { display: none; }
+  .nx-duo .ui-body { min-height: 0; }
+  .atile .media > .ui { margin-bottom: -50px; }
+  .nx-flow { flex-direction: column; align-items: stretch; width: min(320px, 90%); }
+  .nx-flow span:not(:last-child) { margin: 0 0 30px; }
+  .nx-flow span:not(:last-child)::after { left: 50%; top: 100%; width: 2px; height: 30px; }
+  .nx-steps { gap: 12px; }
+}
+@media (max-width: 560px) {
+  .ahero h1 { font-size: clamp(2.2rem, 10.5vw, 3rem); }
+  .nx-stage { aspect-ratio: 1 / 1.05; }
+  .nx-how-h { font-size: 1.5rem; }
+  .nx-steps { margin: 16px 0 16px; grid-template-columns: repeat(3, 1fr); }
+  .nx-steps b { font-size: 1.05rem; }
+  .nx-steps p { display: none; }
+  .nx-card .ui-body { padding: 12px; gap: 10px; }
+  .nx-card .ui-bar { padding: 9px 12px; }
+  .nx-file { padding: 5px 0; font-size: .82rem; }
+  .nx-file:nth-child(3) { display: none; }
+  .nx-prog { width: 46px; }
+  .nx-b { font-size: .85rem; padding: 9px 12px; }
+  .nx-source p { font-size: .84rem; line-height: 1.5; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nx-pin, .nx-how-pin { height: auto; margin-top: 0; }
+  .nx-pin-sticky { position: static; height: auto; display: block; }
+  .nx-stage { height: auto; aspect-ratio: 16 / 10; }
+  .nx-how-sticky { position: static; height: auto; display: block; padding: clamp(64px, 9vw, 120px) 0; }
+  .nx-caption { position: static; opacity: 1; margin-top: 8px; }
+  .nx-steps li { opacity: 1; }
+  .nx-bar u { transform: scaleX(1); }
+}

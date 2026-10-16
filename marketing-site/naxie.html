@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Naxie: Cognax</title>
+<meta name="description" content="Naxie is the Cognax assistant. Ask about uploaded documents, extracted data and dashboards, and see where each answer came from.">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500..700&family=Inter:wght@400..700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('motion');</script>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/naxie.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<!-- shell:nav:start -->
+<header class="nav">
+  <div class="wrap nav__in">
+    <a class="nav__brand" href="index.html" aria-label="Cognax home"><img src="assets/logo.svg" alt="Cognax" width="125" height="28"></a>
+    <nav class="nav__links" id="nav-links" aria-label="Main">
+      <div class="nav__drop">
+        <button class="nav__trigger" id="nav-trigger" type="button" aria-expanded="false" aria-controls="nav-panel" style="color:var(--ink);font-weight:600">Product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="nav__panel" id="nav-panel"><a href="naxie.html" aria-current="page"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg></span><b>Naxie</b><small>Ask questions, get answers you can check</small></a><a href="knowledge-base.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2V5Z"/><path d="M8 7h6M8 11h6"/></svg></span><b>Knowledge Base</b><small>Files, folders and metadata in one place</small></a><a href="dashboards.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg></span><b>Dashboards</b><small>Source-backed reports in groups</small></a><a href="presentations.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M12 16v4M8 20h8"/></svg></span><b>Presentations</b><small>Decks generated from connected data</small></a><a href="connections.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg></span><b>Connections</b><small>Reusable data sources</small></a><a href="automation.html"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M9 6h4a4 4 0 0 1 4 4v5"/></svg></span><b>Data &amp; Automation</b><small>Tables, prompts and docks</small></a></div>
+      </div>
+      <a class="nav__link" href="index.html#how">How it works</a>
+      <a class="nav__link" href="support.html">Support</a>
+      <a class="nav__link" href="contact.html">Contact</a>
+    </nav>
+    <div class="nav__cta">
+      <a class="btn btn--secondary" href="https://cognax.expentor.com/login">Sign in</a>
+      <a class="btn btn--primary" href="contact.html">Request a demo</a>
+      <button class="nav__burger" id="nav-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<!-- shell:nav:end -->
+<main id="main">
+<section class="nx-hero">
+  <div class="wrap nx-hero__grid">
+    <div class="nx-hero__copy">
+      <h1 data-nx>Ask about your work. Check the answer.</h1>
+      <p class="lede" data-nx>Naxie is the Cognax assistant. Ask about uploaded documents, extracted data and dashboards, and see where each answer came from.</p>
+      <div class="btn-row" data-nx><a class="btn btn--primary btn--lg" href="contact.html">Request a demo</a><a class="btn btn--secondary btn--lg" href="https://cognax.expentor.com/login">Sign in</a></div>
+    </div>
+    <div class="win nx-app" data-nx role="img" aria-label="Example: Naxie answers a question about renewal terms and shows the clause it used.">
+      <div class="win__bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg><span>Naxie</span><span class="grow"></span><span class="tag">Example</span></div>
+      <div class="nx-app__grid">
+        <aside class="nx-threads" aria-hidden="true">
+          <p class="nx-label">Conversations</p>
+          <ul>
+            <li class="on">Renewal terms</li>
+            <li>Vendor spend by region</li>
+            <li>Onboarding checklist</li>
+            <li>Supplier obligations</li>
+          </ul>
+        </aside>
+        <div class="nx-app__main">
+          <div class="chat">
+            <div class="msg msg--user" id="nxHq">When does the supplier contract renew, and how do we stop it?</div>
+            <div class="msg msg--bot" id="nxHa">It renews for 12 months unless you give 90 days&rsquo; written notice before the end of the term.<span class="cite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"/><path d="M14 3v5h5"/></svg> Supply Contract, section 9.3</span></div>
+          </div>
+          <div class="doc nx-src" id="nxHd"><p class="doc__title">Supply Contract, 9.3 Renewal</p><p>&hellip;shall renew for successive periods of twelve (12) months <mark class="hl" id="nxHm">unless either party gives ninety (90) days&rsquo; written notice</mark> of non-renewal&hellip;</p></div>
+          <div class="nx-input" aria-hidden="true"><span>Ask a follow-up</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section nx-clause">
+  <div class="wrap split split--7-5">
+    <div class="nx-page" data-reveal id="nxPage" role="img" aria-label="Example contract page with the relevant clause highlighted and a Naxie citation beside it">
+      <div class="nx-page__sheet">
+        <p class="doc__title">12. Term and termination</p>
+        <div class="doc__line" style="width:90%"></div><div class="doc__line" style="width:76%"></div>
+        <p>12.2 Either party may terminate this Agreement for convenience by giving <mark class="hl" id="nxPm">sixty (60) days&rsquo; prior written notice</mark> to the other party.</p>
+        <div class="doc__line" style="width:84%"></div><div class="doc__line" style="width:62%"></div>
+        <p class="nx-page__next">12.3 On termination, the Supplier shall return all Customer materials within thirty (30) days.</p>
+      </div>
+      <div class="nx-page__note"><span class="cite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"/><path d="M14 3v5h5"/></svg> Section 12.2</span><p>Either party can end the agreement with 60 days&rsquo; written notice.</p></div>
+    </div>
+    <div class="copy" data-reveal>
+      <h2>Find the clause, not just a summary</h2>
+      <p>Ask in plain language and Naxie points you to the passage in the document, so you can read it yourself before you act on it.</p>
+      <ul class="ticks">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5L20 7"/></svg><span>Find a clause in a contract or policy</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5L20 7"/></svg><span>Summarize risk or obligations from a document</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5L20 7"/></svg><span>Jump from an answer to the source</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section--mist nx-numbers">
+  <div class="wrap split split--5-7">
+    <div class="copy" data-reveal>
+      <h2>Ask questions of your numbers</h2>
+      <p>Naxie works with the tables and dashboards already in your workspace. Ask for totals, trends or comparisons without building a query.</p>
+      <ul class="ticks">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5L20 7"/></svg><span>Totals, trends and comparisons on demand</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5L20 7"/></svg><span>Works with extracted data and connected sources</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5L20 7"/></svg><span>Explains what a figure means in plain words</span></li>
+      </ul>
+    </div>
+    <div class="win" data-reveal>
+      <div class="win__bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg><span>Naxie</span><span class="grow"></span><span class="tag">Example</span></div>
+      <div class="win__body chat nx-num">
+        <div class="msg msg--user">Which region grew most from Q1 to Q4?</div>
+        <div class="msg msg--bot nx-num__a">
+          <span>West grew most, rising every quarter, with the largest step between Q2 and Q3.</span>
+          <svg class="nx-bars" id="nxBars" viewBox="0 0 300 110" role="img" aria-label="Example chart: West region totals rising across four quarters">
+            <line class="axis" x1="0" y1="90" x2="300" y2="90"/>
+            <rect class="bar" x="10" y="62" width="52" height="28" rx="4"/>
+            <rect class="bar" x="88" y="52" width="52" height="38" rx="4"/>
+            <rect class="bar" x="166" y="28" width="52" height="62" rx="4"/>
+            <rect class="bar bar--hi" x="244" y="10" width="52" height="80" rx="4"/>
+            <text x="36" y="105" text-anchor="middle">Q1</text><text x="114" y="105" text-anchor="middle">Q2</text><text x="192" y="105" text-anchor="middle">Q3</text><text x="270" y="105" text-anchor="middle">Q4</text>
+          </svg>
+          <span class="cite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 15h16M10 9v12"/></svg> Sales forecast.xlsx, By region</span>
+        </div>
+        <div class="msg msg--user">What drove the Q3 jump?</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section nx-threads-sec">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <h2>Pick a thread back up</h2>
+      <p>Every question is saved as a conversation. Come back later, add a follow-up and keep working from where you stopped.</p>
+    </div>
+    <div class="win nx-hist" data-reveal>
+      <div class="win__bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg><span>Conversations</span><span class="grow"></span><span class="chip chip--on">New conversation</span></div>
+      <div class="nx-hist__grid">
+        <ul class="nx-hist__list" aria-label="Example saved conversations">
+          <li class="on"><b>Contract review</b><small>4 follow-ups</small></li>
+          <li><b>Vendor spend by region</b><small>2 follow-ups</small></li>
+          <li><b>Onboarding checklist questions</b><small>1 follow-up</small></li>
+        </ul>
+        <div class="nx-hist__thread chat">
+          <div class="msg msg--user">Which clause covers early termination?</div>
+          <div class="msg msg--bot">Either party can end the agreement with 60 days&rsquo; written notice.<span class="cite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"/><path d="M14 3v5h5"/></svg> Services Agreement, section 12.2</span></div>
+          <div class="msg msg--user">And what happens to our materials afterwards?</div>
+          <div class="msg msg--bot">The supplier returns them within 30 days.<span class="cite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"/><path d="M14 3v5h5"/></svg> Services Agreement, section 12.3</span></div>
+          <div class="nx-input" aria-hidden="true"><span>Add a follow-up</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight works nx-works">
+  <div class="wrap works__in">
+    <h2 class="works__h">Naxie answers from what you have already put into Cognax</h2>
+    <div class="linkrow">
+      <a href="knowledge-base.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2V5Z"/><path d="M8 7h6M8 11h6"/></svg>Knowledge Base</a>
+      <a href="dashboards.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>Dashboards</a>
+      <a href="connections.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>Connections</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band on-night"><div class="wrap"><h2>See Naxie answer from your own documents</h2><p>Book a walkthrough and bring a document you know well. You will know within minutes whether the answers hold up.</p><div class="btn-row"><a class="btn btn--primary btn--lg" href="contact.html">Request a demo</a><a class="btn btn--secondary btn--lg" href="https://cognax.expentor.com/login">Sign in</a></div></div></section>
+</main>
+<!-- shell:footer:start -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div class="foot__brand"><img src="assets/logo.svg" alt="Cognax" width="125" height="28"><p>Upload anything. Ask anything. Trust the answer.</p></div>
+      <nav aria-label="Product"><h2>Product</h2><ul><li><a href="naxie.html">Naxie</a></li><li><a href="knowledge-base.html">Knowledge Base</a></li><li><a href="dashboards.html">Dashboards</a></li><li><a href="presentations.html">Presentations</a></li><li><a href="connections.html">Connections</a></li><li><a href="automation.html">Data &amp; Automation</a></li></ul></nav>
+      <nav aria-label="Company"><h2>Company</h2><ul><li><a href="contact.html">Contact</a></li><li><a href="support.html">Support</a></li><li><a href="https://cognax.expentor.com/login">Sign in</a></li></ul></nav>
+      <nav aria-label="Legal"><h2>Legal</h2><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></nav>
+    </div>
+    <div class="foot__base"><span>&copy; 2026 Cognax. All rights reserved.</span></div>
+  </div>
+</footer>
+<!-- shell:footer:end -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/naxie.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connections: reusable data sources | Cognax</title>
+<meta name="description" content="Connections are the reusable sources behind dashboards, presentations and automations, each with a type, a status and tags.">
+<meta name="theme-color" content="#fcfbf8">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="css/connections.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="index.html" aria-label="Cognax home"><img src="assets/logo.svg" alt="Cognax" width="96" height="22"></a>
+    <nav class="links" id="links" aria-label="Main">
+      <a href="naxie.html">Naxie</a><a href="knowledge-base.html">Knowledge Base</a><a href="dashboards.html">Dashboards</a><a href="presentations.html">Presentations</a><a href="connections.html" aria-current="page">Connections</a><a href="automation.html">Data & Automation</a>
+      <a href="support.html">Support</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-signin" href="https://cognax.expentor.com/login">Sign in</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="links"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+<section class="hero cn-hero">
+  <div class="wrap hero-grid">
+    <div class="cn-hero-copy">
+      <h1 data-hero><span>Connect a source once.</span> <span>Reuse it everywhere.</span></h1>
+      <p class="lede" data-hero>Connections are the reusable sources behind dashboards, presentations and automations, each with a type, a status and tags.</p>
+      <div class="hero-actions" data-hero>
+        <a class="btn btn-primary btn-lg" href="contact.html">Request a demo</a>
+        <a class="btn btn-ghost btn-lg" href="https://cognax.expentor.com/login">Sign in</a>
+      </div>
+      <p class="hero-note" data-hero>Excel connections are available today.</p>
+    </div>
+    <div class="stage3d cn-hero-stage" data-stage="conn-hero" role="img" aria-label="A spreadsheet connected to a hub, which feeds a dashboard, a presentation and an automation"><span class="fallback">A spreadsheet source feeding a dashboard, a presentation and an automation.</span></div>
+  </div>
+</section>
+
+<section class="section cn-list">
+  <div class="wrap">
+    <div class="cn-list-grid">
+      <div class="cn-list-copy">
+        <h2>A clear list of what is connected</h2>
+        <p class="lede">See every source with its type, whether it is ready, when it was created and when it last changed.</p>
+        <ul class="ticks">
+          <li>Filter by connection type</li>
+          <li>Status shows when a source is ready to use</li>
+          <li>Tag connections to keep them organized</li>
+          <li>Open the menu on any row to manage it</li>
+        </ul>
+      </div>
+      <div class="cn-tilt" data-tilt>
+        <div class="ui cn-ui" role="img" aria-label="Illustrative Connections list showing four Excel sources, each marked Ready with tags">
+          <div class="ui-bar"><i></i><i></i><i></i><span style="margin-left:8px">Connections</span></div>
+          <div class="cn-tools"><span class="cn-chip on">All</span><span class="cn-chip">Excel</span><span class="cn-search">Search connections</span><span class="cn-new">New connection</span></div>
+          <table class="tbl cn-tbl"><thead><tr><th>Name</th><th>Type</th><th>Status</th><th>Tags</th><th>Created</th><th>Changed</th><th></th></tr></thead><tbody><tr><td><b>Sales forecast</b></td><td>Excel</td><td><span class="tag ok">Ready</span></td><td><span class="tag">finance</span> <span class="tag">forecast</span></td><td class="cn-dim">Mar 4</td><td class="cn-dim">Today</td><td class="cn-more" aria-hidden="true">&middot;&middot;&middot;</td></tr><tr><td><b>Vendor register</b></td><td>Excel</td><td><span class="tag ok">Ready</span></td><td><span class="tag">operations</span> <span class="tag">vendors</span></td><td class="cn-dim">Feb 19</td><td class="cn-dim">Mar 2</td><td class="cn-more" aria-hidden="true">&middot;&middot;&middot;</td></tr><tr><td><b>Pricing sheet</b></td><td>Excel</td><td><span class="tag ok">Ready</span></td><td><span class="tag">sales</span> <span class="tag">pricing</span></td><td class="cn-dim">Feb 11</td><td class="cn-dim">Feb 27</td><td class="cn-more" aria-hidden="true">&middot;&middot;&middot;</td></tr><tr><td><b>Headcount plan</b></td><td>Excel</td><td><span class="tag ok">Ready</span></td><td><span class="tag">people</span> <span class="tag">planning</span></td><td class="cn-dim">Jan 30</td><td class="cn-dim">Feb 20</td><td class="cn-more" aria-hidden="true">&middot;&middot;&middot;</td></tr></tbody></table>
+          <div class="cn-menu"><b>Sales forecast</b><span>Manage connection</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section soft cn-fan" id="fan">
+  <div class="wrap">
+    <div class="cn-fan-grid">
+      <div class="cn-fan-stage">
+        <div class="stage3d cn-fan-3d" data-stage="conn-fan" role="img" aria-label="One spreadsheet powering a dashboard, a presentation and an automation"><span class="fallback">One source powering a dashboard, a presentation and an automation.</span></div>
+      </div>
+      <div class="cn-fan-copy">
+        <div class="cn-fan-head">
+          <h2>One source, many outputs</h2>
+          <p class="lede">The same connection can power a dashboard report, a presentation and an automation, so numbers agree across all three.</p>
+        </div>
+        
+      <article class="cn-step" data-step>
+        <h3>A report in a dashboard</h3>
+        <p>Create a report inside a dashboard from the connection. When the source changes, you know exactly where to look.</p>
+        <span class="cn-step-tag">Dashboards</span>
+      </article>
+        
+      <article class="cn-step" data-step>
+        <h3>A presentation</h3>
+        <p>Pick the same connection when you create a presentation and Cognax drafts the deck from its data.</p>
+        <span class="cn-step-tag">Presentations</span>
+      </article>
+        
+      <article class="cn-step" data-step>
+        <h3>An automation</h3>
+        <p>Automations can start from the same source, so a workflow runs on the numbers your reports already show.</p>
+        <span class="cn-step-tag">Data &amp; Automation</span>
+      </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cn-works" aria-labelledby="cn-w-h">
+  <div class="wrap">
+    <div class="cn-works-head row-copy">
+      <h2 id="cn-w-h">Works with the rest of Cognax</h2>
+      <p>A connection is set up once, then reused wherever your data shows up.</p>
+    </div>
+    <div class="cn-works-body">
+      <div class="stage3d cn-works-stage" data-stage="conn-works" role="img" aria-label="A spreadsheet in the centre feeding Dashboards, Presentations, Data and Automation and the Knowledge Base"><span class="fallback">One connection feeding the rest of Cognax</span></div>
+      <nav class="cn-works-links" aria-label="Related products"><a class="cn-works-card" href="dashboards.html"><b>Dashboards</b><span>Source-backed reports in groups</span></a><a class="cn-works-card" href="presentations.html"><b>Presentations</b><span>Decks generated from connected data</span></a><a class="cn-works-card" href="automation.html"><b>Data & Automation</b><span>Tables, prompts and docks</span></a><a class="cn-works-card" href="knowledge-base.html"><b>Knowledge Base</b><span>Files, folders and metadata in one place</span></a></nav>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" style="padding-bottom:0"><div class="wrap"><div class="cta-band" data-cta>
+  <h2>Bring your first data source</h2><p>We can walk through connecting one of your spreadsheets in the demo.</p>
+  <div class="hero-actions"><a class="btn btn-primary btn-lg" href="contact.html">Request a demo</a><a class="btn btn-ghost btn-lg" href="https://cognax.expentor.com/login">Sign in</a></div>
+</div></div></section>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="assets/logo.svg" alt="Cognax" width="128" height="29">
+        <p class="muted" style="margin-top:14px;max-width:32ch;font-size:.95rem">Upload anything. Ask anything. Trust the answer.</p>
+      </div>
+      <div><h4>Product</h4><ul><li><a href="naxie.html">Naxie</a></li><li><a href="knowledge-base.html">Knowledge Base</a></li><li><a href="dashboards.html">Dashboards</a></li><li><a href="presentations.html">Presentations</a></li><li><a href="connections.html">Connections</a></li><li><a href="automation.html">Data & Automation</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="contact.html">Contact</a></li><li><a href="support.html">Support</a></li><li><a href="https://cognax.expentor.com/login">Sign in</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
+    </div>
+    <div class="foot-base"><span>&copy; 2026 Cognax. All rights reserved.</span><span>cognax.ai</span></div>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="main.js" defer></script>
+<script type="module" src="js/connections.js"></script>
+</body>
+</html>

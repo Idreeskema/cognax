@@ -1,0 +1,21 @@
+/* Privacy and terms (same file content in css/terms.css). Long-form with sticky table of contents. */
+.lg-grid { display: grid; gap: var(--s-6) clamp(2rem, 6vw, 6rem); }
+.lg-grid > * { min-width: 0; }
+@media (min-width: 900px) { .lg-grid { grid-template-columns: 15rem minmax(0, 1fr); align-items: start; } }
+.lg-toc__h { font-weight: 600; margin-bottom: var(--s-2); }
+.lg-toc ol { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--line); }
+.lg-toc a { display: block; padding: .45rem 0 .45rem var(--s-4); margin-left: -2px; border-left: 2px solid transparent; color: var(--ink-2); font-size: .95rem; min-height: 40px; transition: color var(--t-quick), border-color var(--t-quick); }
+.lg-toc a:hover { color: var(--brand-ink); }
+.lg-toc a.on { color: var(--brand-ink); border-left-color: var(--brand); font-weight: 600; }
+@media (min-width: 900px) { .lg-toc { position: sticky; top: calc(var(--nav-h) + var(--s-5)); } }
+@media (max-width: 899px) {
+  .lg-toc ol { display: flex; flex-wrap: wrap; gap: .5rem; border: 0; }
+  .lg-toc a { border: 1px solid var(--line-strong); border-radius: 999px; padding: .4rem .9rem; margin: 0; display: inline-flex; align-items: center; min-height: 44px; }
+  .lg-toc a.on { background: var(--brand-tint); border-color: var(--brand-tint); }
+}
+.lg-body { max-width: 68ch; }
+.lg-note { background: var(--source-tint); border-left: 3px solid var(--source); padding: var(--s-4) var(--s-5); border-radius: 0 var(--r-s) var(--r-s) 0; color: var(--ink); margin-bottom: var(--s-7); }
+.lg-sec { padding-bottom: var(--s-6); margin-bottom: var(--s-6); border-bottom: 1px solid var(--line); }
+.lg-sec h2 { font-size: clamp(1.4rem, 1.1rem + 1vw, 1.9rem); margin-bottom: var(--s-3); }
+.lg-ph { color: var(--ink-2); display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+.lg-q a { color: var(--brand-ink); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }

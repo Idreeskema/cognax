@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboards | Cognax</title>
+<meta name="description" content="Group reports into dashboards and build each report from a connected source so every number can be traced.">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="css/dashboards.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="index.html" aria-label="Cognax home"><img src="assets/logo.svg" alt="Cognax" width="96" height="22"></a>
+    <nav class="links" id="links" aria-label="Main">
+      <a href="naxie.html">Naxie</a><a href="knowledge-base.html">Knowledge Base</a><a href="dashboards.html" aria-current="page">Dashboards</a><a href="presentations.html">Presentations</a><a href="connections.html">Connections</a><a href="automation.html">Data & Automation</a>
+      <a href="support.html">Support</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-signin" href="https://cognax.expentor.com/login">Sign in</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="links"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+<section class="hero dx-hero">
+  <div class="wrap hero-grid">
+    <div class="dx-hero-copy">
+      <h1 class="reveal">Reports that point back to their source</h1>
+      <p class="lede reveal">Group reports into dashboards, then build each report from a connected source so every number can be traced.</p>
+      <div class="hero-actions reveal"><a class="btn btn-primary btn-lg" href="contact.html">Request a demo</a><a class="btn btn-ghost btn-lg" href="#source">See how a number is traced</a></div>
+    </div>
+    <div class="stage3d dx-hero-stage" data-stage="dash-hero" role="img" aria-label="A 3D bar chart on a plinth, linked by a thin line to the spreadsheet it was built from"><span class="fallback">Bar chart linked to its source spreadsheet</span></div>
+  </div>
+</section>
+
+<section class="dx-groups" aria-labelledby="dx-g-h">
+  <div class="dx-groups-pin wrap">
+    <div class="dx-groups-copy">
+      <h2 id="dx-g-h">Organize reports into groups</h2>
+      <p>A dashboard holds a set of related reports. Keep operational views, finance and project reports apart and open each in one click.</p>
+      <ol class="dx-glist" aria-label="Example dashboards">
+        <li><b>Operations review</b><span>3 reports &middot; updated this month</span></li>
+        <li><b>Vendor performance</b><span>3 reports &middot; updated this month</span></li>
+        <li><b>Finance</b><span>Create a dashboard for each topic and add a description</span></li>
+      </ol>
+    </div>
+    <div class="stage3d dx-groups-stage" data-stage="dash-groups" role="img" aria-label="Three report groups separating from one platform into their own, with the camera circling them"><span class="fallback">Report groups</span></div>
+  </div>
+</section>
+
+<section class="section dx-source" id="source" aria-labelledby="dx-s-h">
+  <div class="wrap">
+    <div class="dx-source-head row-copy">
+      <h2 id="dx-s-h">Source-backed, not screenshot-backed</h2>
+      <p>Each report is created from a connection, such as an Excel file. When the source changes, you know where to look.</p>
+    </div>
+    <div class="dx-source-body">
+      <div class="stage3d dx-source-stage" data-stage="dash-source" role="img" aria-label="Interactive 3D bar chart. Hover a column to highlight its source row in the table."><span class="fallback">Chart</span></div>
+      <div class="ui dx-sheet">
+        <div class="ui-bar"><i></i><i></i><i></i><span style="margin-left:8px">vendor_spend.xlsx</span><span class="tag ok" style="margin-left:auto">Connected</span></div>
+        <table class="tbl dx-tbl"><thead><tr><th>Vendor</th><th class="num">Q3 spend ($k)</th><th>Source</th></tr></thead><tbody><tr tabindex="0"><td>Alder Freight</td><td class="num">412</td><td class="src">Row 2</td></tr><tr tabindex="0"><td>Birch Packaging</td><td class="num">298</td><td class="src">Row 3</td></tr><tr tabindex="0"><td>Cobalt Metals</td><td class="num">655</td><td class="src">Row 4</td></tr><tr tabindex="0"><td>Delta Logistics</td><td class="num">371</td><td class="src">Row 5</td></tr><tr tabindex="0"><td>Elm Components</td><td class="num">520</td><td class="src">Row 6</td></tr><tr tabindex="0"><td>Fjord Plastics</td><td class="num">244</td><td class="src">Row 7</td></tr></tbody></table>
+        <p class="dx-trace" aria-live="polite">Hover a column, or a row, to see where the number comes from.</p>
+      </div>
+    </div>
+    <ul class="ticks dx-ticks">
+      <li>Build reports from Excel connections</li>
+      <li>Share reports with teammates</li>
+      <li>Ungrouped reports are kept in their own tab</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section dx-charts" aria-labelledby="dx-c-h">
+  <div class="wrap">
+    <div class="dx-source-head row-copy">
+      <h2 id="dx-c-h">The right chart for each question</h2>
+      <p>Share of spend, composition and trend: pick the chart type that fits, and each one still reads from its connected source.</p>
+    </div>
+    <div class="dx-chart-grid">
+      <figure class="dx-card"><figcaption><b>Donut</b><span>Q3 spend share by vendor</span></figcaption><div class="stage3d dx-chart" data-stage="dash-donut" data-slices="[[412,&quot;#5b4fd6&quot;],[298,&quot;#ff7a1a&quot;],[655,&quot;#9a90ea&quot;],[371,&quot;#2f2a6b&quot;],[520,&quot;#ffb27a&quot;],[244,&quot;#c9c4f3&quot;]]" role="img" aria-label="3D donut chart of Q3 spend share by vendor"><span class="fallback">Donut chart</span></div><ul class="dx-legend"><li><i style="background:#5b4fd6"></i>Alder Freight<b>16%</b></li><li><i style="background:#ff7a1a"></i>Birch Packaging<b>12%</b></li><li><i style="background:#9a90ea"></i>Cobalt Metals<b>26%</b></li><li><i style="background:#2f2a6b"></i>Delta Logistics<b>15%</b></li><li><i style="background:#ffb27a"></i>Elm Components<b>21%</b></li><li><i style="background:#c9c4f3"></i>Fjord Plastics<b>10%</b></li></ul></figure>
+      <figure class="dx-card"><figcaption><b>Pie</b><span>Spend by category (example data)</span></figcaption><div class="stage3d dx-chart" data-stage="dash-pie" data-slices="[[40,&quot;#5b4fd6&quot;],[30,&quot;#ff7a1a&quot;],[20,&quot;#9a90ea&quot;],[10,&quot;#2f2a6b&quot;]]" role="img" aria-label="3D pie chart of example spend by category"><span class="fallback">Pie chart</span></div><ul class="dx-legend"><li><i style="background:#5b4fd6"></i>Freight<b>40%</b></li><li><i style="background:#ff7a1a"></i>Materials<b>30%</b></li><li><i style="background:#9a90ea"></i>Packaging<b>20%</b></li><li><i style="background:#2f2a6b"></i>Other<b>10%</b></li></ul></figure>
+      <figure class="dx-card"><figcaption><b>Line</b><span>Monthly spend, $k (example data)</span></figcaption><div class="stage3d dx-chart" data-stage="dash-line" data-values="[610,700,655,740,810,950]" role="img" aria-label="3D line chart of monthly spend"><span class="fallback">Line chart</span></div><ul class="dx-legend dx-months"><li>Apr<b>610</b></li><li>May<b>700</b></li><li>Jun<b>655</b></li><li>Jul<b>740</b></li><li>Aug<b>810</b></li><li>Sep<b>950</b></li></ul></figure>
+    </div>
+  </div>
+</section>
+
+<section class="dx-works-sec" aria-labelledby="dx-w-h">
+  <div class="wrap dx-works">
+    <h2 id="dx-w-h">Works with</h2>
+    <p>Dashboards sit on top of your connections and feed your decks.</p>
+    <nav aria-label="Related products"><a href="connections.html">Connections</a><a href="presentations.html">Presentations</a><a href="naxie.html">Naxie</a></nav>
+  </div>
+</section>
+
+
+<section class="section" style="padding-bottom:0"><div class="wrap"><div class="cta-band" data-cta>
+  <h2>Turn a spreadsheet into a report you can defend</h2><p>We will build a first dashboard from one of your own files during the demo.</p>
+  <div class="hero-actions"><a class="btn btn-primary btn-lg" href="contact.html">Request a demo</a><a class="btn btn-ghost btn-lg" href="https://cognax.expentor.com/login">Sign in</a></div>
+</div></div></section>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="assets/logo.svg" alt="Cognax" width="128" height="29">
+        <p class="muted" style="margin-top:14px;max-width:32ch;font-size:.95rem">Upload anything. Ask anything. Trust the answer.</p>
+      </div>
+      <div><h4>Product</h4><ul><li><a href="naxie.html">Naxie</a></li><li><a href="knowledge-base.html">Knowledge Base</a></li><li><a href="dashboards.html">Dashboards</a></li><li><a href="presentations.html">Presentations</a></li><li><a href="connections.html">Connections</a></li><li><a href="automation.html">Data & Automation</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="contact.html">Contact</a></li><li><a href="support.html">Support</a></li><li><a href="https://cognax.expentor.com/login">Sign in</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
+    </div>
+    <div class="foot-base"><span>&copy; 2026 Cognax. All rights reserved.</span><span>cognax.ai</span></div>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="main.js" defer></script>
+<script type="module" src="js/dashboards.js"></script>
+</body>
+</html>

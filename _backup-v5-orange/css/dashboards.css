@@ -1,0 +1,92 @@
+/* Dashboards page */
+.dx-hero { overflow: clip; }
+@media (min-width: 981px) { .dx-hero .hero-grid { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.25fr); } }
+.dx-hero h1 { font-size: clamp(2.6rem, 5.4vw, 4.8rem); max-width: 12ch; }
+.dx-hero-stage { aspect-ratio: 6 / 5; max-height: 760px; margin-right: clamp(-90px, -5vw, 0px); }
+
+/* groups: sticky scroll story */
+.dx-groups { height: 320vh; position: relative; border-top: 1px solid var(--line); }
+.dx-groups-pin { position: sticky; top: var(--nav-h); height: calc(100svh - var(--nav-h)); display: grid; grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.6fr); gap: clamp(24px, 3vw, 48px); align-items: center; }
+.dx-groups-copy h2 { font-size: clamp(2rem, 3.8vw, 3.2rem); }
+.dx-groups-copy > p { margin-top: 18px; color: var(--ink-2); font-size: 1.1rem; max-width: 42ch; }
+.dx-glist { list-style: none; margin: 32px 0 0; padding: 0; display: grid; gap: 0; border-top: 1px solid var(--line); }
+.dx-glist li { display: grid; padding: 16px 0 16px 18px; border-bottom: 1px solid var(--line); position: relative; color: var(--muted); transition: color .4s var(--ease), padding .4s var(--ease); }
+.dx-glist li::before { content: ""; position: absolute; left: 0; top: 18px; bottom: 18px; width: 3px; border-radius: 2px; background: transparent; transition: background .4s; }
+.dx-glist li b { font-size: 1.12rem; font-weight: 600; letter-spacing: -0.015em; }
+.dx-glist li span { font-size: .92rem; }
+.dx-glist li.is-active { color: var(--ink); padding-left: 24px; }
+.dx-glist li.is-active::before { background: var(--accent); }
+.dx-groups-stage { aspect-ratio: auto; height: 100%; max-height: none; min-height: 320px; }
+
+/* source-backed */
+.dx-source-head { max-width: 620px; margin-bottom: clamp(24px, 4vw, 48px); }
+.dx-source-head p { margin-top: 18px; color: var(--ink-2); font-size: 1.15rem; max-width: 48ch; }
+.dx-source-body { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: clamp(20px, 4vw, 56px); align-items: center; }
+.dx-source-stage { aspect-ratio: 5 / 4; max-height: 600px; }
+.dx-tbl .num, .dx-tbl th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.dx-tbl tbody tr { transition: background .2s; cursor: default; position: relative; }
+.dx-tbl tbody tr:focus-visible { outline-offset: -2px; }
+.dx-tbl .src { color: var(--muted); }
+.dx-tbl tr.is-hot { background: #fff1e8; }
+.dx-tbl tr.is-hot td:first-child { box-shadow: inset 4px 0 0 var(--accent); font-weight: 600; }
+.dx-trace { padding: 16px 18px 18px; border-top: 1px solid var(--line); color: var(--ink-2); font-size: .95rem; min-height: 4.4em; background: var(--bg-soft); }
+.dx-trace code { font-family: ui-monospace, "SF Mono", Consolas, monospace; font-size: .86em; background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; }
+.dx-ticks { margin-top: clamp(28px, 4vw, 48px); grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px 40px; border-top: 1px solid var(--line); padding-top: 28px; }
+.dx-source { padding-bottom: clamp(16px, 3vw, 40px); }
+
+/* chart types */
+.dx-charts { padding-bottom: clamp(16px, 3vw, 40px); }
+.dx-chart-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.dx-card { margin: 0; padding: 22px; border: 1px solid var(--line); border-radius: 20px; background: #fff; display: flex; flex-direction: column; gap: 16px; }
+.dx-card figcaption b { display: block; font-size: 1.05rem; letter-spacing: -0.01em; }
+.dx-card figcaption span { color: var(--muted); font-size: .9rem; }
+.dx-chart { aspect-ratio: 1; max-height: 340px; }
+.dx-legend { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: .9rem; color: var(--ink-2); }
+.dx-legend li { display: flex; align-items: center; gap: 8px; }
+.dx-legend i { width: 10px; height: 10px; border-radius: 3px; flex: none; }
+.dx-legend li.is-on { color: var(--ink); font-weight: 600; }
+.dx-legend b { margin-left: auto; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+
+/* works with */
+.dx-works-sec { padding: clamp(24px, 5vw, 72px) 0 0; }
+.dx-works { display: grid; grid-template-columns: auto 1fr auto; gap: 12px 40px; align-items: baseline; padding: 28px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.dx-works h2 { font-size: 1.05rem; letter-spacing: 0; font-weight: 600; color: var(--muted); }
+.dx-works p { color: var(--ink-2); }
+.dx-works nav { display: flex; gap: 28px; flex-wrap: wrap; }
+.dx-works nav a { font-size: 1.25rem; font-weight: 600; letter-spacing: -0.02em; text-decoration: none; border-bottom: 2px solid var(--line); padding-bottom: 2px; transition: border-color .25s, color .25s; }
+.dx-works nav a:hover { color: var(--brand); border-color: var(--brand); }
+
+@media (max-width: 980px) {
+  .dx-hero-stage { margin-right: 0; }
+  .dx-hero h1 { max-width: 14ch; }
+  .dx-groups { height: 280vh; }
+  .dx-groups-pin { grid-template-columns: 1fr; grid-template-rows: auto minmax(0, 1fr); gap: 8px; align-items: start; padding-top: 18px; }
+  .dx-groups-copy > p, .dx-glist li span { display: none; }
+  .dx-groups-copy h2 { font-size: 1.8rem; }
+  .dx-glist { margin-top: 14px; grid-template-columns: repeat(3, 1fr); border-top: 0; }
+  .dx-glist li { padding: 8px 8px 8px 0; border-bottom: 2px solid var(--line); }
+  .dx-glist li::before { display: none; }
+  .dx-glist li.is-active { padding-left: 0; border-bottom-color: var(--accent); }
+  .dx-glist li b { font-size: .88rem; }
+  .dx-source-body { grid-template-columns: 1fr; }
+  .dx-works { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dx-groups { height: auto; }
+  .dx-groups-pin { position: static; height: auto; padding: 56px 0; }
+  .dx-groups-stage { height: auto; aspect-ratio: 16 / 10; }
+  .dx-glist li { color: var(--ink); }
+}
+
+.dx-months { grid-template-columns: repeat(3, 1fr); gap: 6px 16px; }
+.dx-months li b { margin-left: 8px; }
+
+/* source-backed: heading + table are pinned together, so keep them inside the viewport */
+.dx-source-pin .dx-source-head { margin-bottom: clamp(16px, 3vh, 40px); }
+@media (min-width: 981px) and (max-height: 900px) {
+  .dx-source-pin .dx-source-head h2 { font-size: clamp(1.9rem, 4.6vh, 3rem); }
+  .dx-source-pin .dx-source-head p { margin-top: 10px; }
+  .dx-source-stage { max-height: calc(100svh - var(--nav-h) - 250px); }
+  .dx-tbl td { padding: 8px 12px; }
+  .dx-trace { padding: 10px 18px 12px; min-height: 3.4em; }
+}

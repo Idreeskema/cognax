@@ -1,0 +1,64 @@
+/* Naxie page. Prefix nx-. */
+.nx-hero { padding-block: clamp(2.5rem, 1.5rem + 4vw, 5.5rem) clamp(3rem, 2rem + 4vw, 6rem); overflow: clip; }
+.nx-hero__grid { display: grid; gap: var(--s-7) clamp(1.5rem, 4vw, 4rem); align-items: center; }
+@media (min-width: 960px) { .nx-hero__grid { grid-template-columns: 5fr 7fr; } }
+.nx-hero__grid > * { min-width: 0; }
+.nx-hero h1 { max-width: 12ch; }
+.nx-hero .lede { margin-top: var(--s-5); }
+.nx-hero .btn-row { margin-top: var(--s-6); }
+.motion .nx-hero [data-nx] { visibility: hidden; }
+.motion .nx-hero .hl { --hl-w: 0%; }
+
+.nx-label { font-weight: 600; color: var(--ink-3); margin-bottom: .5rem; font-size: .75rem; }
+.nx-app__grid { display: grid; }
+@media (min-width: 640px) { .nx-app__grid { grid-template-columns: 11rem 1fr; } }
+.nx-threads { display: none; padding: 1rem .75rem; border-right: 1px solid var(--line); background: #fafbfd; }
+@media (min-width: 640px) { .nx-threads { display: block; } }
+.nx-threads li { padding: .5rem .6rem; border-radius: var(--r-s); font-weight: 600; color: var(--ink-2); }
+.nx-threads li.on { background: var(--brand-tint); color: var(--brand-ink); }
+.nx-app__main { padding: 1rem; display: grid; gap: .8rem; align-content: start; min-width: 0; }
+.nx-src { margin: 0; }
+.nx-input { border: 1px solid var(--line-strong); border-radius: 999px; padding: .55rem .9rem; color: var(--ink-3); }
+.nx-hero .nx-app { box-shadow: var(--e-3); }
+
+/* clause section */
+.nx-page { position: relative; padding: clamp(1rem, 4vw, 2.5rem) 0 clamp(1rem, 4vw, 2.5rem) clamp(0rem, 3vw, 2rem); }
+.nx-page__sheet { background: #fff; border: 1px solid var(--line); border-radius: var(--r-m); box-shadow: var(--e-3); padding: clamp(1.25rem, 4vw, 2.5rem); font-size: .95rem; line-height: 1.65; color: var(--ink-2); max-width: 36rem; }
+.nx-page__sheet p { margin-bottom: .5rem; }
+.nx-page__sheet .doc__title { color: var(--ink); font-size: 1.05rem; margin-bottom: .8rem; }
+.nx-page__next { color: var(--ink-3); }
+.nx-page__note { position: relative; margin: -1.25rem 0 0 auto; width: min(100%, 20rem); display: grid; gap: .4rem; padding: .85rem 1rem; background: #fff; border: 1px solid var(--line); border-left: 3px solid var(--source); border-radius: var(--r-s); box-shadow: var(--e-2); font-size: var(--fs-mock); }
+.nx-page__note p { margin: 0; color: var(--ink); font-weight: 500; }
+.nx-page__note .cite { margin: 0; width: fit-content; }
+@media (min-width: 900px) { .nx-page__note { position: absolute; right: -1rem; bottom: 0; margin: 0; } }
+
+/* numbers section */
+.nx-num { padding: 1.1rem; }
+.nx-num .msg { max-width: 100%; }
+.nx-num__a { display: grid; gap: .6rem; }
+.nx-bars { width: 100%; max-width: 20rem; height: auto; }
+.nx-bars .axis { stroke: var(--line-strong); }
+.nx-bars .bar { fill: var(--brand); }
+.nx-bars .bar--hi { fill: var(--ink); }
+.nx-bars text { font: 500 11px var(--font-body); fill: var(--ink-3); }
+.nx-num .msg--user { max-width: 80%; }
+
+/* history */
+
+.nx-hist__grid { display: grid; }
+@media (min-width: 800px) { .nx-hist__grid { grid-template-columns: 17rem 1fr; } }
+.nx-hist__list { padding: 1rem; background: #fafbfd; border-bottom: 1px solid var(--line); display: grid; gap: .4rem; align-content: start; }
+@media (min-width: 800px) { .nx-hist__list { border-bottom: 0; border-right: 1px solid var(--line); } }
+.nx-hist__list li { padding: .65rem .8rem; border-radius: var(--r-s); }
+.nx-hist__list li.on { background: var(--brand-tint); }
+.nx-hist__list b { display: block; font-weight: 600; }
+.nx-hist__list small { color: var(--ink-3); }
+.nx-hist__list li.on b, .nx-hist__list li.on small { color: var(--brand-ink); }
+.nx-hist__thread { padding: 1.25rem; align-content: start; }
+.nx-hist .win__bar .chip { min-height: 26px; padding: .2rem .65rem; font-size: .72rem; }
+
+/* works with */
+.nx-works .works__in { display: grid; gap: var(--s-4) var(--s-7); align-items: center; border-top: 1px solid var(--line); padding-top: var(--s-6); }
+@media (min-width: 900px) { .nx-works .works__in { grid-template-columns: 6fr 6fr; } }
+.nx-works .works__h { font-size: clamp(1.3rem, 1.1rem + .9vw, 1.8rem); max-width: 24ch; }
+.nx-works { padding-bottom: calc(var(--section-y) * .8); }

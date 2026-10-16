@@ -1,0 +1,43 @@
+/* Naxie page */
+.nx-track { height: 300vh; margin-top: 8px; }
+.nx-sticky { position: sticky; top: calc(var(--nav-h) + var(--local-h)); height: calc(100dvh - var(--nav-h) - var(--local-h)); }
+.nx-sticky-in { position: relative; height: 100%; }
+.nx-sticky .stage3d { aspect-ratio: auto; height: 100%; max-height: none; }
+.nx-cap { position: absolute; left: 0; right: 0; bottom: 18px; margin: 0; height: 1.5em; text-align: center; font-size: 1.0625rem; font-weight: 500; color: var(--ink-2); pointer-events: none; }
+.nx-cap span { position: absolute; inset: 0; opacity: 0; transform: translateY(8px); transition: opacity .5s var(--ease), transform .5s var(--ease); }
+.nx-cap[data-step="0"] span:nth-child(1), .nx-cap[data-step="1"] span:nth-child(2), .nx-cap[data-step="2"] span:nth-child(3) { opacity: 1; transform: none; }
+
+.stage3d.wide.nx-wide { aspect-ratio: 16 / 10; max-height: 640px; }
+
+/* clause card */
+.nx-clause { perspective: 1400px; padding: 10px 0 40px; text-align: left; }
+.nx-clause-tilt { position: relative; transform-style: preserve-3d; transform: rotateY(-8deg) rotateX(4deg); will-change: transform; max-width: 600px; margin-inline: auto; }
+.nx-doc { background: #fff; border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 50px 80px -40px rgba(0, 0, 0, .3); padding: 26px 30px 90px; }
+.nx-doc-bar { display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 14px; margin-bottom: 22px; font-size: .88rem; color: var(--muted); }
+.nx-doc-bar b { color: var(--ink); font-weight: 600; }
+.nx-doc h3 { font-size: 1.08rem; margin-bottom: 12px; }
+.nx-doc p { font-size: .92rem; line-height: 1.7; margin-bottom: 14px; }
+.nx-doc .dim { color: #86868b; }
+.nx-hl { position: relative; padding-left: 14px; border-left: 3px solid var(--brand); color: var(--ink); }
+.nx-mark { background: linear-gradient(#e0ddff, #e0ddff) no-repeat left / 100% 100%; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.nx-ans { position: absolute; right: -28px; bottom: -34px; width: min(330px, 72%); background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 16px 20px 18px; box-shadow: 0 34px 60px -26px rgba(0, 0, 0, .35); transform: translateZ(70px); }
+.nx-ans small { display: block; font-weight: 600; color: var(--brand); margin-bottom: 4px; }
+.nx-ans p { font-weight: 500; font-size: 1rem; line-height: 1.4; color: var(--ink); }
+.nx-cite { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; padding: 4px 12px 4px 10px; border-radius: 999px; background: var(--brand-soft); color: var(--brand-ink); font-size: .8rem; font-weight: 600; }
+.nx-cite::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--brand); }
+
+.nx-with { padding-bottom: 0; }
+.nx-with .cta-row { margin-top: 12px; }
+
+@media (max-width: 980px) {
+  .nx-track { height: 240vh; margin-top: -20px; }
+  .nx-sticky { height: min(calc(100dvh - var(--nav-h) - var(--local-h)), 620px); }
+  .stage3d.wide.nx-wide { aspect-ratio: 1 / 1; }
+  .nx-ans { right: -8px; }
+  .nx-clause-tilt { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nx-track { height: auto; }
+  .nx-sticky { position: static; height: 560px; }
+  .nx-clause-tilt { transform: rotateY(-6deg) rotateX(3deg); }
+}
